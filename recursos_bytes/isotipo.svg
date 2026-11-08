@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="isotipo" viewBox="-440 -440 880 880" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round">
+    <path class="arc r1 top" data-ring="1" data-part="top" d="M-400.0 -49.1A403 403 0 0 1 400.0 -49.1"/>
+    <path class="arc r1 bottom" data-ring="1" data-part="bottom" d="M398.8 58.2A403 403 0 0 1 -398.8 58.2"/>
+    <path class="arc r2 left" data-ring="2" data-part="left" d="M-69.7 302.1A310 310 0 0 1 -69.7 -302.1"/>
+    <path class="arc r2 right" data-ring="2" data-part="right" d="M69.7 -302.1A310 310 0 0 1 69.7 302.1"/>
+    <path class="arc r3 top" data-ring="3" data-part="top" d="M-210.1 -50.1A216 216 0 0 1 210.1 -50.1"/>
+    <path class="arc r3 bottom" data-ring="3" data-part="bottom" d="M208.0 58.1A216 216 0 0 1 -208.0 58.1"/>
+    <path class="arc r4 left" data-ring="4" data-part="left" d="M-70.0 99.9A122 122 0 0 1 -70.0 -99.9"/>
+    <path class="arc r4 right" data-ring="4" data-part="right" d="M70.0 -99.9A122 122 0 0 1 70.0 99.9"/>
+  </g>
+</svg>

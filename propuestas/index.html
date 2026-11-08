@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#101820">
+<meta name="color-scheme" content="dark">
+<title>Propuestas de portada | Bytes</title>
+<link rel="icon" href="../recursos_bytes/favicon-32.png" type="image/png" sizes="32x32">
+<style>
+:root{
+    --bg:#101820;
+    --bg-2:#0b1117;
+    --green:#19510A;
+    --glow:#3fae4f;
+    --gray:#D7D7D6;
+    --muted:rgba(215,215,214,.62);
+    --line:rgba(215,215,214,.12);
+    --font:"Helvetica Now Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--gray);font-family:var(--font);line-height:1.5;overflow-x:hidden;
+    background-image:radial-gradient(1200px 600px at 50% -10%,rgba(25,81,10,.28),transparent 70%)}
+a{color:inherit}
+a:focus-visible{outline:2px solid #2ECC40;outline-offset:3px;border-radius:4px}
+
+.top{max-width:1200px;margin:0 auto;padding:22px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-style:italic;letter-spacing:-.5px;font-size:1.1rem}
+.brand svg{width:26px;height:26px;color:var(--gray)}
+.top a.back{font-size:.85rem;color:var(--muted);text-decoration:none}
+.top a.back:hover{color:var(--gray)}
+
+header.intro{max-width:1200px;margin:0 auto;padding:70px 20px 40px}
+.kicker{display:inline-block;font-size:.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--glow);font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:900;font-style:italic;letter-spacing:-.04em;line-height:.95;max-width:14ch}
+h1 span{color:transparent;-webkit-text-stroke:1.5px var(--gray)}
+.lead{margin-top:24px;max-width:62ch;font-size:clamp(1.02rem,1.4vw,1.2rem);color:var(--muted)}
+
+.grid{max-width:1200px;margin:0 auto;padding:30px 20px 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:28px;overflow:hidden;
+    background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .4s}
+.card:hover{transform:translateY(-6px);border-color:rgba(63,174,79,.45)}
+.visual{position:relative;aspect-ratio:4/3;display:grid;place-items:center;background:var(--bg-2);overflow:hidden;border-bottom:1px solid var(--line)}
+.visual svg{width:56%;height:auto;overflow:visible}
+.tag{position:absolute;top:16px;left:16px;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;font-weight:700;
+    padding:6px 12px;border-radius:999px;background:rgba(16,24,32,.7);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.body{padding:26px 24px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
+.body h2{font-size:1.9rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.body p{color:var(--muted);font-size:.98rem}
+.body ol{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:7px;font-size:.9rem;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:14px;margin-top:2px}
+.body ol li{counter-increment:s;display:grid;grid-template-columns:26px 1fr}
+.body ol li::before{content:counter(s,decimal-leading-zero);color:var(--glow);font-weight:700;font-size:.75rem;padding-top:2px}
+.cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 20px;border-radius:14px;
+    background:var(--green);color:#fff;text-decoration:none;font-weight:700;transition:background .3s,transform .3s}
+.cta:hover{background:#24750e}
+.cta span{transition:transform .3s}
+.cta:hover span{transform:translateX(4px)}
+.card > a.cover{position:absolute;inset:0;z-index:1}
+.card .cta{position:relative;z-index:2}
+
+section.compare{max-width:1200px;margin:0 auto;padding:40px 20px 30px}
+section.compare h2,section.next h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;letter-spacing:-.03em;margin-bottom:20px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:20px}
+table{width:100%;border-collapse:collapse;min-width:640px;font-size:.95rem}
+th,td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);font-weight:700;background:rgba(255,255,255,.02)}
+tbody tr:last-child td{border-bottom:0}
+tbody th{font-weight:600;color:var(--gray);width:26%}
+td{color:var(--muted)}
+.dots{letter-spacing:3px;color:var(--glow);white-space:nowrap}
+.dots i{font-style:normal;color:rgba(215,215,214,.18)}
+
+section.next{max-width:1200px;margin:0 auto;padding:40px 20px 90px}
+.next-box{border:1px solid var(--line);border-radius:28px;padding:34px 30px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;
+    background:radial-gradient(600px 300px at 0% 0%,rgba(25,81,10,.25),transparent 70%)}
+.next-box p,.next-box li{color:var(--muted)}
+.next-box ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.next-box li{padding-left:22px;position:relative}
+.next-box li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--glow)}
+footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;font-size:.85rem;color:var(--muted)}
+
+/* ---- Miniatura A: el isotipo se desarma y se rearma ---- */
+.va .arc{animation:3.2s cubic-bezier(.65,0,.35,1) infinite alternate}
+.va .r1.top{animation-name:a1t}.va .r1.bottom{animation-name:a1b}
+.va .r2.left{animation-name:a2l}.va .r2.right{animation-name:a2r}
+.va .r3.top{animation-name:a3t}.va .r3.bottom{animation-name:a3b}
+.va .r4.left{animation-name:a4l}.va .r4.right{animation-name:a4r}
+@keyframes a1t{0%,25%{transform:none}100%{transform:translate(0,-80px) rotate(8deg)}}
+@keyframes a1b{0%,25%{transform:none}100%{transform:translate(0,80px) rotate(8deg)}}
+@keyframes a2l{0%,25%{transform:none}100%{transform:translate(-95px,0) rotate(-12deg)}}
+@keyframes a2r{0%,25%{transform:none}100%{transform:translate(95px,0) rotate(-12deg)}}
+@keyframes a3t{0%,25%{transform:none}100%{transform:translate(0,-46px) rotate(20deg)}}
+@keyframes a3b{0%,25%{transform:none}100%{transform:translate(0,46px) rotate(20deg)}}
+@keyframes a4l{0%,25%{transform:none}100%{transform:translate(-30px,0) rotate(-28deg)}}
+@keyframes a4r{0%,25%{transform:none}100%{transform:translate(30px,0) rotate(-28deg)}}
+.va svg{color:var(--gray)}
+.va .r4{color:var(--glow)}
+
+/* ---- Miniatura B: túnel a través de los anillos ---- */
+.vb{perspective:420px}
+.vb .tunnel{position:relative;width:56%;aspect-ratio:1;transform-style:preserve-3d}
+.vb .tunnel svg{position:absolute;inset:0;width:100%;height:100%;animation:dive 4s linear infinite;opacity:0}
+.vb .tunnel svg:nth-child(2){animation-delay:-1s}
+.vb .tunnel svg:nth-child(3){animation-delay:-2s}
+.vb .tunnel svg:nth-child(4){animation-delay:-3s}
+@keyframes dive{0%{transform:translateZ(-900px) rotate(0deg);opacity:0}20%{opacity:.9}85%{opacity:.9}100%{transform:translateZ(380px) rotate(40deg);opacity:0}}
+.vb .core{position:absolute;width:16%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#c9ffd2 0%,var(--glow) 35%,transparent 70%);filter:blur(2px);animation:pulse 2s ease-in-out infinite alternate}
+@keyframes pulse{to{transform:scale(1.35);opacity:.7}}
+.vb .tunnel svg{color:var(--gray)}
+
+/* ---- Miniatura C: isotipo hecho de puntos ---- */
+.vc svg .arc{stroke-dasharray:0 30;stroke-width:18;animation:flow 6s linear infinite}
+.vc svg .arc.r2,.vc svg .arc.r4{animation-direction:reverse}
+@keyframes flow{to{stroke-dashoffset:-300}}
+.vc svg{color:var(--gray)}
+.vc svg .r3,.vc svg .r4{color:var(--glow)}
+.vc .bits{position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(215,215,214,.18) 1.2px,transparent 1.6px);background-size:16px 16px;
+    -webkit-mask-image:radial-gradient(circle at 50% 50%,transparent 32%,#000 70%);mask-image:radial-gradient(circle at 50% 50%,transparent 32%,#000 70%);
+    animation:drift 8s linear infinite}
+@keyframes drift{to{background-position:0 160px}}
+
+@media (max-width:980px){
+    .grid{grid-template-columns:1fr;max-width:620px}
+    .next-box{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+    table{min-width:0}
+    thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    table,tbody,tr,th,td{display:block;width:100%}
+    tbody tr{padding:16px 18px;border-bottom:1px solid var(--line)}
+    tbody tr:last-child{border-bottom:0}
+    tbody th{width:100%;padding:0 0 10px;border:0}
+    td{padding:6px 0;border:0;display:grid;grid-template-columns:130px 1fr;gap:10px}
+    td::before{content:attr(data-l);font-size:.78rem;color:var(--gray);opacity:.8}
+}
+@media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+        <g id="iso" fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round">
+            <path class="arc r1 top" d="M-400.0 -49.1A403 403 0 0 1 400.0 -49.1"/>
+            <path class="arc r1 bottom" d="M398.8 58.2A403 403 0 0 1 -398.8 58.2"/>
+            <path class="arc r2 left" d="M-69.7 302.1A310 310 0 0 1 -69.7 -302.1"/>
+            <path class="arc r2 right" d="M69.7 -302.1A310 310 0 0 1 69.7 302.1"/>
+            <path class="arc r3 top" d="M-210.1 -50.1A216 216 0 0 1 210.1 -50.1"/>
+            <path class="arc r3 bottom" d="M208.0 58.1A216 216 0 0 1 -208.0 58.1"/>
+            <path class="arc r4 left" d="M-70.0 99.9A122 122 0 0 1 -70.0 -99.9"/>
+            <path class="arc r4 right" d="M70.0 -99.9A122 122 0 0 1 70.0 99.9"/>
+        </g>
+    </defs>
+</svg>
+
+<div class="top">
+    <a class="brand" href="../index.html">
+        <svg viewBox="-440 -440 880 880" aria-hidden="true" focusable="false"><use href="#iso"/></svg>
+        Bytes
+    </a>
+    <a class="back" href="../index.html">← Portada actual</a>
+</div>
+
+<header class="intro">
+    <span class="kicker">Rediseño de la portada · 2026</span>
+    <h1>Bajar también es <span>una experiencia.</span></h1>
+    <p class="lead">Tres direcciones para convertir la portada de Bytes en un recorrido continuo. Las tres usan el isotipo redibujado en vector, pieza por pieza, para que sus 8 arcos puedan moverse, separarse y volver a encajar mientras bajas. Ábrelas y baja despacio: el scroll es la línea de tiempo.</p>
+</header>
+
+<main class="grid">
+    <article class="card">
+        <a class="cover" href="desensamble.html" aria-label="Abrir la propuesta A, Desensamble"></a>
+        <div class="visual va" aria-hidden="true">
+            <span class="tag">Propuesta A</span>
+            <svg viewBox="-440 -440 880 880"><g fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round">
+                <path class="arc r1 top" d="M-400.0 -49.1A403 403 0 0 1 400.0 -49.1"/>
+                <path class="arc r1 bottom" d="M398.8 58.2A403 403 0 0 1 -398.8 58.2"/>
+                <path class="arc r2 left" d="M-69.7 302.1A310 310 0 0 1 -69.7 -302.1"/>
+                <path class="arc r2 right" d="M69.7 -302.1A310 310 0 0 1 69.7 302.1"/>
+                <path class="arc r3 top" d="M-210.1 -50.1A216 216 0 0 1 210.1 -50.1"/>
+                <path class="arc r3 bottom" d="M208.0 58.1A216 216 0 0 1 -208.0 58.1"/>
+                <path class="arc r4 left" d="M-70.0 99.9A122 122 0 0 1 -70.0 -99.9"/>
+                <path class="arc r4 right" d="M70.0 -99.9A122 122 0 0 1 70.0 99.9"/>
+            </g></svg>
+        </div>
+        <div class="body">
+            <h2>Desensamble</h2>
+            <p>El logo se desarma al empezar a bajar. Cada arco acompaña un capítulo y, al final, la historia de Bytes lo vuelve a armar pieza a pieza.</p>
+            <ol>
+                <li>El isotipo se abre: los anillos giran en sentidos opuestos</li>
+                <li>Sus mitades enmarcan Web y Sistemas</li>
+                <li>Los “( )” del centro laten como la voz de ANA</li>
+                <li>2024 → 2026: cada año devuelve un anillo</li>
+                <li>Logo completo + “Hablemos”</li>
+            </ol>
+            <a class="cta" href="desensamble.html">Ver propuesta A <span>→</span></a>
+        </div>
+    </article>
+
+    <article class="card">
+        <a class="cover" href="nucleo.html" aria-label="Abrir la propuesta B, Al núcleo"></a>
+        <div class="visual vb" aria-hidden="true">
+            <span class="tag">Propuesta B</span>
+            <div class="core"></div>
+            <div class="tunnel">
+                <svg viewBox="-440 -440 880 880"><use href="#iso"/></svg>
+                <svg viewBox="-440 -440 880 880"><use href="#iso"/></svg>
+                <svg viewBox="-440 -440 880 880"><use href="#iso"/></svg>
+                <svg viewBox="-440 -440 880 880"><use href="#iso"/></svg>
+            </div>
+        </div>
+        <div class="body">
+            <h2>Al núcleo</h2>
+            <p>El isotipo es un portal. Al bajar, la cámara vuela en 3D a través de sus anillos, con estrellas que se estiran según la velocidad del scroll, hasta llegar al núcleo: ANA.</p>
+            <ol>
+                <li>Capa 01: atraviesas el anillo exterior y aparece Web</li>
+                <li>Capa 02: Sistemas y apps</li>
+                <li>Los “( )” se abren como compuertas y aparece el orbe de ANA</li>
+                <li>Al otro lado: la trayectoria viene hacia ti</li>
+                <li>La cámara se aleja y el logo se recompone</li>
+            </ol>
+            <a class="cta" href="nucleo.html">Ver propuesta B <span>→</span></a>
+        </div>
+    </article>
+
+    <article class="card">
+        <a class="cover" href="particulas.html" aria-label="Abrir la propuesta C, Hecho de bytes"></a>
+        <div class="visual vc" aria-hidden="true">
+            <span class="tag">Propuesta C</span>
+            <div class="bits"></div>
+            <svg viewBox="-440 -440 880 880"><g fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round">
+                <path class="arc r1" d="M-400.0 -49.1A403 403 0 0 1 400.0 -49.1"/>
+                <path class="arc r1" d="M398.8 58.2A403 403 0 0 1 -398.8 58.2"/>
+                <path class="arc r2" d="M-69.7 302.1A310 310 0 0 1 -69.7 -302.1"/>
+                <path class="arc r2" d="M69.7 -302.1A310 310 0 0 1 69.7 302.1"/>
+                <path class="arc r3" d="M-210.1 -50.1A216 216 0 0 1 210.1 -50.1"/>
+                <path class="arc r3" d="M208.0 58.1A216 216 0 0 1 -208.0 58.1"/>
+                <path class="arc r4" d="M-70.0 99.9A122 122 0 0 1 -70.0 -99.9"/>
+                <path class="arc r4" d="M70.0 -99.9A122 122 0 0 1 70.0 99.9"/>
+            </g></svg>
+        </div>
+        <div class="body">
+            <h2>Hecho de bytes</h2>
+            <p>El isotipo está hecho de miles de partículas, cada una un byte. Al bajar se desintegra y se transforma en una figura distinta en cada capítulo.</p>
+            <ol>
+                <li>Las partículas llegan del caos y forman el logo</li>
+                <li>Se deshace en una lluvia de datos</li>
+                <li>Se convierte en un navegador, luego en una red de apps</li>
+                <li>Orbe vivo de ANA; los años 2024 → 2026 se transforman entre sí</li>
+                <li>Vuelven a formar el isotipo + “Hablemos”</li>
+            </ol>
+            <a class="cta" href="particulas.html">Ver propuesta C <span>→</span></a>
+        </div>
+    </article>
+</main>
+
+<section class="compare" aria-labelledby="cmp">
+    <h2 id="cmp">Comparativa</h2>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr><th scope="col">Criterio</th><th scope="col">A · Desensamble</th><th scope="col">B · Al núcleo</th><th scope="col">C · Hecho de bytes</th></tr>
+            </thead>
+            <tbody>
+                <tr><th scope="row">Protagonismo del isotipo</th>
+                    <td data-l="A · Desensamble"><span class="dots" role="img" aria-label="5 de 5">●●●●●</span></td>
+                    <td data-l="B · Al núcleo"><span class="dots" role="img" aria-label="4 de 5">●●●●<i>●</i></span></td>
+                    <td data-l="C · Hecho de bytes"><span class="dots" role="img" aria-label="4 de 5">●●●●<i>●</i></span></td></tr>
+                <tr><th scope="row">Efecto “wow”</th>
+                    <td data-l="A · Desensamble"><span class="dots" role="img" aria-label="4 de 5">●●●●<i>●</i></span></td>
+                    <td data-l="B · Al núcleo"><span class="dots" role="img" aria-label="5 de 5">●●●●●</span></td>
+                    <td data-l="C · Hecho de bytes"><span class="dots" role="img" aria-label="5 de 5">●●●●●</span></td></tr>
+                <tr><th scope="row">Rendimiento en móviles modestos</th>
+                    <td data-l="A · Desensamble"><span class="dots" role="img" aria-label="5 de 5">●●●●●</span></td>
+                    <td data-l="B · Al núcleo"><span class="dots" role="img" aria-label="3 de 5">●●●<i>●●</i></span></td>
+                    <td data-l="C · Hecho de bytes"><span class="dots" role="img" aria-label="3 de 5">●●●<i>●●</i></span></td></tr>
+                <tr><th scope="row">Facilidad para editar textos</th>
+                    <td data-l="A · Desensamble"><span class="dots" role="img" aria-label="5 de 5">●●●●●</span></td>
+                    <td data-l="B · Al núcleo"><span class="dots" role="img" aria-label="4 de 5">●●●●<i>●</i></span></td>
+                    <td data-l="C · Hecho de bytes"><span class="dots" role="img" aria-label="4 de 5">●●●●<i>●</i></span></td></tr>
+                <tr><th scope="row">Tecnología</th>
+                    <td data-l="A · Desensamble">SVG + CSS transforms</td>
+                    <td data-l="B · Al núcleo">CSS 3D + canvas de estrellas</td>
+                    <td data-l="C · Hecho de bytes">Canvas 2D con miles de partículas</td></tr>
+                <tr><th scope="row">Encaja mejor si…</th>
+                    <td data-l="A · Desensamble">quieres que la marca sea el hilo conductor de todo el sitio</td>
+                    <td data-l="B · Al núcleo">quieres posicionar a ANA como el corazón de Bytes</td>
+                    <td data-l="C · Hecho de bytes">quieres transmitir “datos e IA” de forma muy tecnológica</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="next" aria-labelledby="nxt">
+    <div class="next-box">
+        <div>
+            <h2 id="nxt">Siguiente paso</h2>
+            <p>Elige una dirección, o una mezcla (por ejemplo, el desarme de A arriba con el orbe de partículas de C para ANA). La versión elegida sustituye a la portada actual en <code>index.html</code> y mantiene todas las páginas internas como están.</p>
+        </div>
+        <ul>
+            <li>Scroll nativo: nada secuestra la rueda ni el gesto táctil.</li>
+            <li>Con “reducir movimiento” activado, todo queda estático y legible.</li>
+            <li>Sin librerías externas: cero dependencias nuevas.</li>
+            <li>El isotipo vectorial queda en <code>recursos_bytes/isotipo.svg</code> para usarlo en todo el sitio.</li>
+        </ul>
+    </div>
+</section>
+
+<footer>© 2026 Bytes · Propuestas internas de diseño, no indexadas.</footer>
+
+</body>
+</html>
