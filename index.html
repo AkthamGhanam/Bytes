@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,255 +19,302 @@
     <meta property="og:image" content="recursos_bytes/Logo Bytes-57.png">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="preload" as="image" href="recursos_bytes/Logo Bytes-57.png">
-    <link rel="stylesheet" href="CSS/base.css">
+    <script>
+    /* Antes de pintar: con JS y sin "reducir movimiento" se activa el modo escena. */
+    (function () {
+        var d = document.documentElement;
+        d.classList.remove('no-js');
+        d.classList.add('js');
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+    })();
+    </script>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
 
-    <nav class="apple-navbar">
-    <div class="navbar-content">
-        <a href="index.html" class="nav-logo">
-            <img src="recursos_bytes/Logo Bytes-57.png" alt="Bytes" width="18" height="18" decoding="async">
-        </a>
-        
-        <button class="menu-toggle" id="mobile-menu" type="button"
-                aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-list">
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
 
-        <ul class="nav-list" id="nav-list">
-            <li><a href="html/ana.html">ANA</a></li>
-            <li><a href="html/desarrollo-web.html">Web</a></li>
-            <li><a href="html/sistemas-apps.html">Sistemas</a></li>
-            <li><a href="html/ana-doc.html">Documentación</a></li>
-            <li><a href="Navegacion_Bytes/proyectos.html">Proyectos</a></li>
-            <li><a href="Navegacion_Bytes/nuestro-equipo.html">Equipo</a></li>
-            <li><a href="Navegacion_Bytes/fundadores.html">Fundadores</a></li>
-        </ul>
-    </div>
+<!-- Isotipo como símbolo reutilizable (nav, footer, versiones estáticas) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="iso" viewBox="-440 -440 880 880">
+        <g fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round">
+            <path d="M-400.0 -49.1A403 403 0 0 1 400.0 -49.1"/>
+            <path d="M398.8 58.2A403 403 0 0 1 -398.8 58.2"/>
+            <path d="M-69.7 302.1A310 310 0 0 1 -69.7 -302.1"/>
+            <path d="M69.7 -302.1A310 310 0 0 1 69.7 302.1"/>
+            <path d="M-210.1 -50.1A216 216 0 0 1 210.1 -50.1"/>
+            <path d="M208.0 58.1A216 216 0 0 1 -208.0 58.1"/>
+            <path d="M-70.0 99.9A122 122 0 0 1 -70.0 -99.9"/>
+            <path d="M70.0 -99.9A122 122 0 0 1 70.0 99.9"/>
+        </g>
+    </symbol>
+</svg>
+
+<header class="nav">
+    <a href="index.html" class="nav-logo" aria-label="Bytes, inicio">
+        <svg aria-hidden="true" focusable="false"><use href="#iso"/></svg>
+        <span>Bytes</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links"><i></i><i></i></button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="html/ana.html">ANA</a></li>
+        <li><a href="html/desarrollo-web.html">Web</a></li>
+        <li><a href="html/sistemas-apps.html">Sistemas</a></li>
+        <li><a href="html/ana-doc.html">Documentación</a></li>
+        <li><a href="Navegacion_Bytes/proyectos.html">Proyectos</a></li>
+        <li><a href="Navegacion_Bytes/nuestro-equipo.html">Equipo</a></li>
+        <li><a href="Navegacion_Bytes/fundadores.html">Fundadores</a></li>
+    </ul>
+</header>
+<div class="topbar" aria-hidden="true"></div>
+
+<nav class="rail" aria-label="Capítulos de la página">
+    <a href="#inicio" data-go="inicio"><span class="dot"></span><span class="lbl"><b>00</b>Inicio</span></a>
+    <a href="#servicios" data-go="servicios"><span class="dot"></span><span class="lbl"><b>01</b>Servicios</span></a>
+    <a href="#ana" data-go="ana"><span class="dot"></span><span class="lbl"><b>02</b>ANA</span></a>
+    <a href="#navegacion" data-go="navegacion"><span class="dot"></span><span class="lbl"><b>03</b>Navegación</span></a>
+    <a href="#trayectoria" data-go="trayectoria"><span class="dot"></span><span class="lbl"><b>04</b>Trayectoria</span></a>
+    <a href="#contacto" data-go="contacto"><span class="dot"></span><span class="lbl"><b>05</b>Contacto</span></a>
 </nav>
 
-    <div class="background-fixed">
-        <div class="stars layer1"></div>
-        <div class="stars layer2"></div>
-        <div class="stars layer3"></div>
-        <div class="stars layer4"></div>
-        <div class="shooting-star-u"></div>
-    </div>
 
-    <div class="main-scroll-container">
-        
-        <section class="space-container">
-            <main class="brand-landing">
-                <div class="brand-wrapper">
-                    <img src="recursos_bytes/Logo Bytes-57.png" alt="Bytes" class="hero-logo" width="160" height="160" fetchpriority="high" decoding="async">
-                    <div class="title-container">
-                        <h1 class="brand-name-bytes">BYTES</h1>
-                    </div>
-                    <p class="tagline-bytes">La nueva realidad de la IA.</p>
-                    
-                    <div class="scroll-indicator">
-                        <div class="mouse">
-                            <div class="wheel"></div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </section>
+<div class="backdrop" aria-hidden="true"></div>
 
-        <section class="products-grid-section">
-    
-    <div class="product-card light">
-        <img src="recursos_bytes/Logo Bytes-61.png" alt="" class="product-media" width="320" height="320" loading="lazy" decoding="async">
-        <div class="card-body">
-            <h2 class="product-title">Desarrollo web<br>Creando algo único.</h2>
-            <p class="product-tagline">Una visión que cambia tu marca.</p>
-            <div class="button-group">
-                <a href="html/desarrollo-web.html" class="btn-blue">Saber más</a>
+<!-- El actor: 8 arcos que viajan por toda la página -->
+<svg class="actor" aria-hidden="true" focusable="false" viewBox="-720 -450 1440 900" preserveAspectRatio="xMidYMid meet">
+    <defs>
+        <radialGradient id="glowGrad">
+            <stop offset="0" stop-color="#2ECC40" stop-opacity=".55"/>
+            <stop offset=".45" stop-color="#19510A" stop-opacity=".28"/>
+            <stop offset="1" stop-color="#19510A" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+    <circle class="glow" r="1" fill="url(#glowGrad)" opacity="0"/>
+    <circle class="shock" r="1" fill="none" stroke="#3fae4f" stroke-width="1.5" vector-effect="non-scaling-stroke" opacity="0"/>
+    <g fill="none" stroke="#D7D7D6" stroke-width="52" stroke-linecap="round">
+        <path class="arc" d="M-400.0 -49.1A403 403 0 0 1 400.0 -49.1"/>
+        <path class="arc" d="M398.8 58.2A403 403 0 0 1 -398.8 58.2"/>
+        <path class="arc" d="M-69.7 302.1A310 310 0 0 1 -69.7 -302.1"/>
+        <path class="arc" d="M69.7 -302.1A310 310 0 0 1 69.7 302.1"/>
+        <path class="arc" d="M-210.1 -50.1A216 216 0 0 1 210.1 -50.1"/>
+        <path class="arc" d="M208.0 58.1A216 216 0 0 1 -208.0 58.1"/>
+        <path class="arc" d="M-70.0 99.9A122 122 0 0 1 -70.0 -99.9"/>
+        <path class="arc" d="M70.0 -99.9A122 122 0 0 1 70.0 99.9"/>
+    </g>
+</svg>
+
+<main>
+    <!-- 0 · Hero  +  1 · Desarme -->
+    <section id="inicio" class="scene" aria-label="Inicio">
+        <div class="stage hero">
+            <div class="hero-slot" data-slot="hero">
+                <svg class="static-iso" aria-hidden="true" focusable="false"><use href="#iso"/></svg>
             </div>
-        </div>
-    </div>
-
-    <div class="product-card dark">
-        <img src="recursos_bytes/Logo Bytes-57.png" alt="" class="product-media" width="320" height="320" loading="lazy" decoding="async">
-        <div class="card-body">
-            <h2 class="product-title">Sistemas-apps<br>Creando algo funcional.</h2>
-            <p class="product-tagline">Soluciones integradas para tu negocio.</p>
-            <div class="button-group">
-                <a href="html/sistemas-apps.html" class="btn-blue">Saber más</a>
-                
+            <div class="hero-txt">
+                <h1 class="wordmark">BYTES</h1>
+                <p class="tagline">La nueva realidad de la IA.</p>
             </div>
-        </div>
-    </div>
+            <div class="cue" aria-hidden="true"><span>Desliza para desarmar</span><i></i></div>
 
-</section>
-
-<section class="ana-special-section">
-    <div class="ana-container">
-        <div class="ana-visual">
-            <img src="recursos_bytes/Logo Bytes-57.png" alt="" class="ana-core-img" width="350" height="350" loading="lazy" decoding="async">
-            <div class="ana-glow"></div>
-        </div>
-        
-        <div class="ana-content">
-            <span class="ana-badge">Neural Model v3.0</span>
-            <h2 class="ana-title">ANA</h2>
-            <p class="ana-description">
-                La inteligencia que trasciende lo convencional. Una arquitectura diseñada para comprender, crear y evolucionar junto a Bytes.
-            </p>
-            
-            <div class="ana-button-group">
-                <a href="html/ana.html" class="btn-ana-primary">Interactuar con ANA</a>
-                <a href="html/ana-doc.html" class="btn-ana-secondary">Documentación</a>
+            <div class="statement">
+                <p class="kicker st-k">01 — Desarme</p>
+                <h2 class="st-title">
+                    <span class="w">Desarmamos</span> <span class="w">cada</span> <span class="w">idea</span>
+                    <span class="w">hasta</span> <span class="w">su</span> <span class="w"><em>último</em></span>
+                    <span class="w"><em>byte.</em></span>
+                </h2>
+                <p class="st-sub">Somos un estudio de ingeniería de software e inteligencia artificial de Colombia y Venezuela. Entendemos cada pieza antes de construir la siguiente.</p>
             </div>
+            <div class="hud" aria-hidden="true"><span>Desarme</span><span class="bar"><i></i></span><b>000%</b></div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-<section class="chronicle-section">
-    <div class="chronicle-bg-texture"></div>
-    
-    <div class="chronicle-container">
-        <div class="chronicle-intro">
-            <h2 class="chronicle-title">Nuestra <br> Trayectoria</h2>
-            <div class="chronicle-line"></div>
-        </div>
-
-        <div class="story-grid">
-            <article class="story-entry left">
-                <div class="entry-year">2024</div>
-                <div class="entry-box">
-                    <span class="entry-label">Fundación</span>
-                    <h3>El Primer Bit</h3>
-                    <p>Bytes nace en Colombia-Venezuela con un objetivo claro: elevar el estándar del desarrollo de software, combinando ingeniería profunda con diseño de clase mundial.</p>
+    <!-- 2 · Servicios: las piezas enmarcan cada servicio -->
+    <section id="servicios" class="scene" aria-label="Servicios">
+        <div class="stage svc-stage">
+            <article class="svc" data-svc="web" data-at=".26">
+                <span class="bgword" aria-hidden="true">WEB</span>
+                <div class="svc-inner">
+                    <p class="kicker rv" style="--i:0">Capa 01 · Servicio</p>
+                    <h2 class="rv" style="--i:1">Desarrollo web</h2>
+                    <p class="lead rv" style="--i:2">Creando algo único.</p>
+                    <p class="tag rv" style="--i:3">Una visión que cambia tu marca.</p>
+                    <a class="btn btn-primary rv" style="--i:4" href="html/desarrollo-web.html">Saber más <span class="ar" aria-hidden="true">→</span></a>
                 </div>
             </article>
-
-            <article class="story-entry right">
-                <div class="entry-year">2025</div>
-                <div class="entry-box">
-                    <span class="entry-label">Expansión</span>
-                    <h3>Ecosistema Aurora</h3>
-                    <p>Desarrollamos nuestra infraestructura de ventas más robusta, permitiendo a empresas locales operar con estándares globales de conversión y gestión.</p>
-                </div>
-            </article>
-
-            <article class="story-entry left">
-                <div class="entry-year">2026</div>
-                <div class="entry-box">
-                    <span class="entry-label">Actualidad</span>
-                    <h3>Inteligencia ANA</h3>
-                    <p>Consolidamos nuestra propia IA, ANA, integrándola como el núcleo pensante de nuestras soluciones empresariales y de desarrollo.</p>
+            <article class="svc" data-svc="sys" data-at=".8">
+                <span class="bgword" aria-hidden="true">APPS</span>
+                <div class="svc-inner">
+                    <p class="kicker rv" style="--i:0">Capa 02 · Servicio</p>
+                    <h2 class="rv" style="--i:1">Sistemas &amp; Apps</h2>
+                    <p class="lead rv" style="--i:2">Creando algo funcional.</p>
+                    <p class="tag rv" style="--i:3">Soluciones integradas para tu negocio.</p>
+                    <a class="btn btn-primary rv" style="--i:4" href="html/sistemas-apps.html">Saber más <span class="ar" aria-hidden="true">→</span></a>
                 </div>
             </article>
         </div>
-    </div>
-</section>
+    </section>
 
-
-<section class="focus-nav-section">
-    <div class="focus-container">
-        <div class="focus-intro">
-            <span class="focus-label">Acceso Directo</span>
-            <h2 class="focus-title">Navegación <span>Bytes</span></h2>
-            <p class="focus-subtitle">Selecciona un núcleo para profundizar en nuestro ecosistema.</p>
-        </div>
-
-        <div class="focus-grid">
-            <a href="Navegacion_Bytes/fundadores.html" class="focus-card">
-                <div class="focus-content">
-                    <div class="focus-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
-                            <path d="M12 11c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 13c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                    </div>
-                    <h3>Fundadores</h3>
-                    <p>Liderazgo técnico y visión de negocio de Bytes.</p>
-                </div>
-                <span class="focus-arrow">→</span>
-            </a>
-
-            <a href="Navegacion_Bytes/nuestro-equipo.html" class="focus-card">
-                <div class="focus-content">
-                    <div class="focus-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 14v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                    </div>
-                    <h3>Nuestro Equipo</h3>
-                    <p>Mentes brillantes ejecutando el futuro digital.</p>
-                </div>
-                <span class="focus-arrow">→</span>
-            </a>
-
-            <a href="Navegacion_Bytes/proyectos.html" class="focus-card">
-                <div class="focus-content">
-                    <div class="focus-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
-                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-                        </svg>
-                    </div>
-                    <h3>Proyectos</h3>
-                    <p>Portafolio de ingeniería de alto impacto y escala.</p>
-                </div>
-                <span class="focus-arrow">→</span>
-            </a>
-        </div>
-    </div>
-</section>
-
-<footer class="unique-footer">
-    <div class="footer-curve"></div> <div class="footer-content">
-        <div class="footer-hero">
-            <h2 class="footer-big-text">¿Listo para el <br> <span class="glitch-text">Siguiente Nivel?</span></h2>
-            <a href="mailto:contacto@bytes.com" class="footer-cta-orbital">
-                <span class="cta-inner">Hablemos</span>
-                <div class="cta-ring"></div>
-            </a>
-        </div>
-
-        <div class="footer-bottom-bar">
-            <div class="footer-brand">
-                <img src="recursos_bytes/Logo Bytes-57.png" alt="Bytes" class="footer-mini-logo" width="30" height="30" loading="lazy" decoding="async">
-                <p>© 2026 Bytes. Hecho con ingeniería de alto impacto.</p>
+    <!-- 3 · ANA: el núcleo habla -->
+    <section id="ana" class="scene" aria-label="ANA">
+        <div class="stage ana" data-at=".6">
+            <div class="ana-slot" data-slot="ana">
+                <svg class="static-iso" aria-hidden="true" focusable="false"><use href="#iso"/></svg>
             </div>
-
-            <nav class="footer-nav">
-                <div class="nav-group">
-                    <a href="index.html">Inicio</a>
-                    <a href="html/ana.html">ANA AI</a>
+            <div class="ana-copy">
+                <div class="badge rv" style="--i:0"><i></i>Neural Model v3.0</div>
+                <h2 class="rv" style="--i:1">ANA</h2>
+                <p class="desc rv" style="--i:2">La inteligencia que trasciende lo convencional. Una arquitectura diseñada para comprender, crear y evolucionar junto a Bytes.</p>
+                <div class="btns rv" style="--i:3">
+                    <a class="btn btn-primary" href="html/ana.html">Interactuar con ANA <span class="ar" aria-hidden="true">→</span></a>
+                    <a class="btn btn-ghost" href="html/ana-doc.html">Documentación</a>
                 </div>
-                <div class="nav-group">
-                    <a href="Navegacion_Bytes/fundadores.html">Fundadores</a>
-                    <a href="Navegacion_Bytes/nuestro-equipo.html">Equipo</a>
-                    <a href="Navegacion_Bytes/proyectos.html">Proyectos</a>
-                    <a href="Navegacion_Bytes/legal.html">Legal</a>
-                </div>
-            </nav>
-            <div class="nav-group social-nodes">
-    <a href="#" class="social-link" aria-label="LinkedIn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-    </a>
-    <a href="https://www.instagram.com/bytes_technology/" class="social-link" aria-label="Instagram">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-    </a>
-    <a href="#" class="social-link" aria-label="X (Twitter)">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768m2.46-2.46L20 4"></path></svg>
-    </a>
-    <a href="#" class="social-link" aria-label="GitHub">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-    </a>
-</div>
+            </div>
         </div>
+    </section>
+
+    <!-- 4 · Navegación: telón crema -->
+    <section id="navegacion" class="curtain" aria-labelledby="nav-title">
+        <div class="nav-head">
+            <p class="kicker">Acceso directo</p>
+            <h2 id="nav-title">Navegación <em>Bytes</em></h2>
+            <p class="sub">Selecciona un núcleo para profundizar en nuestro ecosistema.</p>
+        </div>
+        <div class="cards">
+            <a class="card" style="--i:0" href="Navegacion_Bytes/fundadores.html">
+                <div class="card-top"><span class="num">01 / Núcleo</span><span class="arrow" aria-hidden="true">↗</span></div>
+                <svg class="card-iso" viewBox="-440 -440 880 880" aria-hidden="true" focusable="false">
+                    <g fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round">
+                        <path d="M-400.0 -49.1A403 403 0 0 1 400.0 -49.1"/><path d="M398.8 58.2A403 403 0 0 1 -398.8 58.2"/>
+                        <path d="M-69.7 302.1A310 310 0 0 1 -69.7 -302.1"/><path d="M69.7 -302.1A310 310 0 0 1 69.7 302.1"/>
+                        <path d="M-210.1 -50.1A216 216 0 0 1 210.1 -50.1"/><path d="M208.0 58.1A216 216 0 0 1 -208.0 58.1"/>
+                        <path class="hl m1" d="M-70.0 99.9A122 122 0 0 1 -70.0 -99.9"/><path class="hl m2" d="M70.0 -99.9A122 122 0 0 1 70.0 99.9"/>
+                    </g>
+                </svg>
+                <div><h3>Fundadores</h3><p>Liderazgo técnico y visión de negocio de Bytes.</p></div>
+            </a>
+            <a class="card" style="--i:1" href="Navegacion_Bytes/nuestro-equipo.html">
+                <div class="card-top"><span class="num">02 / Capas</span><span class="arrow" aria-hidden="true">↗</span></div>
+                <svg class="card-iso" viewBox="-440 -440 880 880" aria-hidden="true" focusable="false">
+                    <g fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round">
+                        <path d="M-400.0 -49.1A403 403 0 0 1 400.0 -49.1"/><path d="M398.8 58.2A403 403 0 0 1 -398.8 58.2"/>
+                        <path class="hl m1" d="M-69.7 302.1A310 310 0 0 1 -69.7 -302.1"/><path class="hl m2" d="M69.7 -302.1A310 310 0 0 1 69.7 302.1"/>
+                        <path class="hl v1" d="M-210.1 -50.1A216 216 0 0 1 210.1 -50.1"/><path class="hl v2" d="M208.0 58.1A216 216 0 0 1 -208.0 58.1"/>
+                        <path d="M-70.0 99.9A122 122 0 0 1 -70.0 -99.9"/><path d="M70.0 -99.9A122 122 0 0 1 70.0 99.9"/>
+                    </g>
+                </svg>
+                <div><h3>Nuestro Equipo</h3><p>Mentes brillantes ejecutando el futuro digital.</p></div>
+            </a>
+            <a class="card" style="--i:2" href="Navegacion_Bytes/proyectos.html">
+                <div class="card-top"><span class="num">03 / Órbita</span><span class="arrow" aria-hidden="true">↗</span></div>
+                <svg class="card-iso" viewBox="-440 -440 880 880" aria-hidden="true" focusable="false">
+                    <g fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round">
+                        <path class="hl v1" d="M-400.0 -49.1A403 403 0 0 1 400.0 -49.1"/><path class="hl v2" d="M398.8 58.2A403 403 0 0 1 -398.8 58.2"/>
+                        <path d="M-69.7 302.1A310 310 0 0 1 -69.7 -302.1"/><path d="M69.7 -302.1A310 310 0 0 1 69.7 302.1"/>
+                        <path d="M-210.1 -50.1A216 216 0 0 1 210.1 -50.1"/><path d="M208.0 58.1A216 216 0 0 1 -208.0 58.1"/>
+                        <path d="M-70.0 99.9A122 122 0 0 1 -70.0 -99.9"/><path d="M70.0 -99.9A122 122 0 0 1 70.0 99.9"/>
+                    </g>
+                </svg>
+                <div><h3>Proyectos</h3><p>Portafolio de ingeniería de alto impacto y escala.</p></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 5 · Trayectoria: el logo se rearma año a año -->
+    <section id="trayectoria" class="scene" aria-label="Trayectoria">
+        <div class="stage tray">
+            <header class="tray-head rv">
+                <p class="kicker">Trayectoria · 2024 — 2026</p>
+                <h2>Así construimos: <em>pieza a pieza.</em></h2>
+            </header>
+            <div class="tray-slot" data-slot="tray">
+                <svg class="static-iso" aria-hidden="true" focusable="false"><use href="#iso"/></svg>
+            </div>
+            <div class="tray-years">
+                <article class="year" data-year="0">
+                    <span class="ynum rv" style="--i:0" aria-hidden="true">2024</span>
+                    <p class="kicker rv" style="--i:1">2024 · Fundación</p>
+                    <h3 class="rv" style="--i:2">El Primer Bit</h3>
+                    <p class="desc rv" style="--i:3">Bytes nace en Colombia-Venezuela con un objetivo claro: elevar el estándar del desarrollo de software, combinando ingeniería profunda con diseño de clase mundial.</p>
+                </article>
+                <article class="year" data-year="1">
+                    <span class="ynum rv" style="--i:0" aria-hidden="true">2025</span>
+                    <p class="kicker rv" style="--i:1">2025 · Expansión</p>
+                    <h3 class="rv" style="--i:2">Ecosistema Aurora</h3>
+                    <p class="desc rv" style="--i:3">Desarrollamos nuestra infraestructura de ventas más robusta, permitiendo a empresas locales operar con estándares globales de conversión y gestión.</p>
+                </article>
+                <article class="year" data-year="2">
+                    <span class="ynum rv" style="--i:0" aria-hidden="true">2026</span>
+                    <p class="kicker rv" style="--i:1">2026 · Actualidad</p>
+                    <h3 class="rv" style="--i:2">Inteligencia ANA</h3>
+                    <p class="desc rv" style="--i:3">Consolidamos nuestra propia IA, ANA, integrándola como el núcleo pensante de nuestras soluciones empresariales y de desarrollo.</p>
+                </article>
+            </div>
+            <div class="timeline" aria-hidden="true">
+                <div class="track"><div class="draw"></div></div>
+                <ol class="tnodes"><li>2024</li><li>2025</li><li>2026</li></ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 · CTA: el logo completo -->
+    <section id="contacto" class="scene" aria-label="Contacto">
+        <div class="stage cta" data-at=".5">
+            <h2 class="cta-h">
+                <span class="l1 rv" style="--i:0">¿Listo para el</span>
+                <span class="l2 rv" style="--i:1"><em>siguiente nivel?</em></span>
+            </h2>
+            <div class="cta-slot" data-slot="cta">
+                <svg class="static-iso" aria-hidden="true" focusable="false"><use href="#iso"/></svg>
+            </div>
+            <a class="orbital rv" style="--i:2" href="mailto:contacto@bytes.com">Hablemos</a>
+            <a class="cta-mail rv" style="--i:3" href="mailto:contacto@bytes.com">contacto@bytes.com</a>
+        </div>
+    </section>
+</main>
+
+<footer class="foot">
+    <div class="foot-top">
+        <div class="foot-brand">
+            <div class="big" aria-hidden="true">Bytes</div>
+            <p>La nueva realidad de la IA.</p>
+        </div>
+        <nav class="foot-col" aria-label="Explorar">
+            <h3>Explorar</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="html/ana.html">ANA AI</a></li>
+                <li><a href="Navegacion_Bytes/proyectos.html">Proyectos</a></li>
+            </ul>
+        </nav>
+        <nav class="foot-col" aria-label="Bytes">
+            <h3>Bytes</h3>
+            <ul>
+                <li><a href="Navegacion_Bytes/fundadores.html">Fundadores</a></li>
+                <li><a href="Navegacion_Bytes/nuestro-equipo.html">Equipo</a></li>
+                <li><a href="Navegacion_Bytes/legal.html">Legal</a></li>
+            </ul>
+        </nav>
+        <nav class="foot-col" aria-label="Servicios">
+            <h3>Servicios</h3>
+            <ul>
+                <li><a href="html/desarrollo-web.html">Desarrollo web</a></li>
+                <li><a href="html/sistemas-apps.html">Sistemas &amp; apps</a></li>
+                <li><a href="html/ana-doc.html">Documentación</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="foot-bottom">
+        <div class="mini">
+            <svg aria-hidden="true" focusable="false"><use href="#iso"/></svg>
+            <span>© 2026 Bytes. Hecho con ingeniería de alto impacto.</span>
+        </div>
+        <a class="social" href="https://www.instagram.com/bytes_technology/" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+        </a>
     </div>
 </footer>
-        
-    </div>
-    
-    <script src="JS/nav.js" defer></script>
-    <script src="JS/script.js" defer></script>
+
+<script src="JS/script.js" defer></script>
 </body>
 </html>
